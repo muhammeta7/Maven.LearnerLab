@@ -40,7 +40,7 @@ public abstract class People<E extends Person> {
         return personList.size();
     }
 
-    public abstract E[] toArray();
+    public abstract E[] getArray();
 
     public List<E> getPersonList(){
         return personList;
