@@ -6,7 +6,7 @@ import org.junit.Test;
 public class TestStudent {
 
     @Test
-    public void TestStudentInstanceOfLearner(){
+    public void testImplementation(){
         // Given
         Student student = new Student(123, "Moe");
 
@@ -18,7 +18,7 @@ public class TestStudent {
     }
 
     @Test
-    public void TestStudentInstanceOfPerson(){
+    public void testInheritance(){
         // Given
         Student student = new Student(123, null);
 
@@ -30,7 +30,7 @@ public class TestStudent {
     }
 
     @Test
-    public void TestLearnerMethod(){
+    public void testLearn(){
         // Given
         Student student = new Student(123, null);
         student.learn(5);

@@ -6,9 +6,9 @@ import org.junit.Test;
 public class TestPerson {
 
     @Test
-    public void TestConstructor(){
+    public void testConstructor(){
         // Given
-        long id = 128282829;
+        long id = 123456;
         String name = "Moe";
         Person person = new Person(id, name);
 
@@ -23,9 +23,9 @@ public class TestPerson {
     }
 
     @Test
-    public void TestSetName(){
+    public void testSetName(){
         // Given
-        Person person = new Person(102929, null);
+        Person person = new Person(123456, null);
         String expected = "Moe";
         person.setName(expected);
 

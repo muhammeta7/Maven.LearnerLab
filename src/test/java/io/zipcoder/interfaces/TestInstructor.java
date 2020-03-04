@@ -17,7 +17,6 @@ public class TestInstructor {
         Assert.assertTrue(actual);
     }
 
-
     @Test
     public void testInheritance(){
         // Given
@@ -29,9 +28,6 @@ public class TestInstructor {
         // Then
         Assert.assertTrue(actual);
     }
-
-
-
 
     @Test
     public void testTeach(){
@@ -48,8 +44,6 @@ public class TestInstructor {
         Assert.assertEquals(expected, actual, .001);
     }
 
-
-    // TODO: ask someone about this
     @Test
     public void testLecture(){
         // Given
