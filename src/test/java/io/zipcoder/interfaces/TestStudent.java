@@ -41,7 +41,6 @@ public class TestStudent {
 
         // Then
         Assert.assertEquals(expected, actual, .001);
-
     }
 
 }
