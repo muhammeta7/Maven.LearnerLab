@@ -7,7 +7,6 @@ public class TestPerson {
 
     @Test
     public void TestConstructor(){
-
         // Given
         long id = 128282829;
         String name = "Moe";
@@ -21,12 +20,10 @@ public class TestPerson {
         // Then
         Assert.assertEquals(id, expectedId);
         Assert.assertEquals(name, expectedName);
-
     }
 
     @Test
     public void TestSetName(){
-
         // Given
         Person person = new Person(102929, null);
         String expected = "Moe";
@@ -37,7 +34,6 @@ public class TestPerson {
 
         // Then
         Assert.assertEquals(expected, actual);
-        
     }
 }
 
