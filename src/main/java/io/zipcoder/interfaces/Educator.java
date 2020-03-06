@@ -15,8 +15,8 @@ public enum Educator implements Teacher{
 
     Educator(String name, long id){
         instructor = new Instructor(id, name);
-        instructor.setName(name);
         Instructors.getInstance().add(instructor);
+        this.timeWorked = 0;
     }
 
     @Override

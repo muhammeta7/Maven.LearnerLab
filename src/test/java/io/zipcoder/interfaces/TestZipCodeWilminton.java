@@ -1,44 +1,46 @@
 package io.zipcoder.interfaces;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 public class TestZipCodeWilminton {
+
+    ZipCodeWilmington zcw;
+    Students students;
+    Instructor instructor;
+
+
+    @Before
+    public void setup(){
+        zcw = ZipCodeWilmington.getInstance();
+        students = Students.getInstance();
+        for (Student student : students.getArray()) {
+            student.learn(4);
+        }
+        instructor = new Instructor(1, "Roberto");
+    }
+
     @Test
     public void testHostLectureWithTeacher() {
-        // Given
-        ZipCodeWilmington zcw = ZipCodeWilmington.getInstance();
-        Students expected = Students.getInstance();
-        for (Student student : expected.getArray()) {
-            student.learn(7);
-        }
-        Instructor instructor = new Instructor(1, "Nobles");
-
         // When
-        zcw.hostLecture(instructor, 28);
+        zcw.hostLecture(instructor, 16);
         Students actual = zcw.getStudents();
 
         // Then
-        Assert.assertEquals(expected, actual);
+        Assert.assertEquals(students, actual);
     }
 
 
-   /* @Test
+    @Test
     public void testHostLectureWithId(){
-        // Given
-        ZipCodeWilmington zcw = ZipCodeWilmington.getInstance();
-        Students expected = Students.getInstance();
-        for (Student student : expected.getArray()) {
-            student.learn(5);
-        }
-
         // When
-        zcw.hostLecture(1, 20);
+        zcw.hostLecture(1, 16);
         Students actual = zcw.getStudents();
 
         // Then
-        Assert.assertEquals(expected, actual);
-    }*/
+        Assert.assertEquals(students, actual);
+    }
 
 
 }

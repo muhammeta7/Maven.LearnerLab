@@ -24,10 +24,6 @@ public class ZipCodeWilmington {
         hostLecture(teacher, numberOfHours);
     }
 
-    public void hostLecture(Educator educator, double numberOfHours){
-        educator.lecture(students.getArray(), numberOfHours);
-    }
-
     public Map<Student, Double> getStudyMap(){
         Map<Student, Double>  map = new HashMap<>();
         for(Student s : students.getArray()){

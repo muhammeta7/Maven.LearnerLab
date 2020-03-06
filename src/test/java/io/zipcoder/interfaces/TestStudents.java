@@ -14,7 +14,7 @@ public class TestStudents {
         // Given
         Integer expected = 4;
         Students instance = Students.getInstance();
-        System.out.println(instance);
+
 
         // When
         Integer actual = instance.count();

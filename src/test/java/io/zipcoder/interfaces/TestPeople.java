@@ -2,26 +2,16 @@ package io.zipcoder.interfaces;
 
 import org.junit.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class TestPeople {
 
-
-    Student joe = new Student(123449494, "Joe");
-    Student jack = new Student(1239494, "Jack");
+    private static Student joe = new Student(10, "Joe");;
+    Student jack = new Student(12, "Jack");
     static People<Student> students;
-
-    @BeforeClass
-    public static void beforeClass() {
-
-    }
 
     @Before
     public void setUp(){
         students  = Students.getInstance();
     }
-
 
     @Test
     public void testAdd() {
@@ -51,29 +41,32 @@ public class TestPeople {
     @Test
     public void testRemoveById(){
         // Given
-        students.getPersonList().stream().map(e -> e.getName()).forEach(System.out::println);
-        System.out.println("----------------------------");
-        students.add(joe);
+//        students.getPersonList().stream().map(e -> e.getName()).forEach(System.out::println);
+        students.add(jack);
 
         // When
-        students.remove(joe.getId());
-        students.getPersonList().stream().map(e -> e.getName()).forEach(System.out::println);
+        students.remove(jack.getId());
+//        students.getPersonList().stream().map(e -> e.getName()).forEach(System.out::println);
         Student expected = students.findById(jack.getId());
 
         // Then
         Assert.assertNull(expected);
     }
 
-
     @Test
     public void testFindById() {
         // Given
-        People<Student> students = Students.getInstance();
         String expectedName = "Moe";
         // When
-        Student actual = students.findById(1);
+        Student moe = students.findById(1);
+        String actual = moe.getName();
         // Then
-        Assert.assertEquals(actual.getName(), expectedName);
+        Assert.assertEquals(actual, expectedName);
+    }
+
+    @AfterClass
+    public static void afterAll(){
+        students.remove(joe);
     }
 
 

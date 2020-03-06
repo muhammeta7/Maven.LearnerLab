@@ -30,7 +30,6 @@ public abstract class People<E extends Person> {
     }
 
     public void remove(long id){
-        /*E byId = findById(id);*/
         personList.remove(findById(id));
     }
 
