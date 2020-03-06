@@ -19,8 +19,7 @@ public final class Students extends People<Student> {
     public Student[] getArray() {
         return getPersonList().toArray(new Student[0]);
     }
-
-
+    
 }
 
 
