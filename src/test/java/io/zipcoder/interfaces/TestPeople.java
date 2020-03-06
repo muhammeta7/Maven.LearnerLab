@@ -41,7 +41,7 @@ public class TestPeople {
     @Test
     public void testRemoveById(){
         // Given
-//        students.getPersonList().stream().map(e -> e.getName()).forEach(System.out::println);
+//      students.getPersonList().stream().map(e -> e.getName()).forEach(System.out::println);
         students.add(jack);
 
         // When

@@ -15,31 +15,34 @@ public class TestZipCodeWilminton {
     public void setup(){
         zcw = ZipCodeWilmington.getInstance();
         students = Students.getInstance();
-        for (Student student : students.getArray()) {
-            student.learn(4);
-        }
         instructor = new Instructor(1, "Roberto");
     }
 
     @Test
     public void testHostLectureWithTeacher() {
+        // Given
+        Double expected = 4.0;
+
         // When
         zcw.hostLecture(instructor, 16);
-        Students actual = zcw.getStudents();
+        Double actual = zcw.getStudyMap().get(students.findById(1));
 
         // Then
-        Assert.assertEquals(students, actual);
+        Assert.assertEquals(expected, actual);
     }
 
 
     @Test
     public void testHostLectureWithId(){
+        // Given
+        Double expected = 8.0;
+
         // When
         zcw.hostLecture(1, 16);
-        Students actual = zcw.getStudents();
+        Double actual = zcw.getStudyMap().get(students.findById(2));
 
         // Then
-        Assert.assertEquals(students, actual);
+        Assert.assertEquals(expected, actual);
     }
 
 
