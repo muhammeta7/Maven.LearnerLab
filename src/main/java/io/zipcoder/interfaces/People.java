@@ -4,6 +4,7 @@ import com.sun.org.glassfish.gmbal.InheritedAttribute;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public abstract class People<E extends Person> {
 
@@ -15,9 +16,9 @@ public abstract class People<E extends Person> {
 
     public E findById(long id){
 
-        for(E person : personList){
-            if(person.getId() == id){
-                return person;
+        for(E p : personList){
+            if(p.getId() == id){
+                return p;
             }
         }
         return null;
@@ -29,6 +30,7 @@ public abstract class People<E extends Person> {
     }
 
     public void remove(long id){
+        /*E byId = findById(id);*/
         personList.remove(findById(id));
     }
 
