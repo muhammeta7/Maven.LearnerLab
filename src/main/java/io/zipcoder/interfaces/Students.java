@@ -11,7 +11,7 @@ public final class Students extends People<Student> {
         add(new Student(4, "Han"));
     }
 
-    public synchronized static Students getInstance(){
+    public static Students getInstance(){
         return INSTANCE;
     }
 

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public abstract class People<E extends Person> implements Iterable<E>{
+public abstract class People<E extends Person> {
 
     private List<E> personList = new ArrayList<>();
 
@@ -25,7 +25,7 @@ public abstract class People<E extends Person> implements Iterable<E>{
 
     }
 
-    public void remove(Person person){
+    public void remove(E person){
         personList.remove(person);
     }
 
