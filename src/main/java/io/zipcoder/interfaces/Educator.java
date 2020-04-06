@@ -9,7 +9,6 @@ public enum Educator implements Teacher{
     KRIS("Kris", 5);
 
 
-
     final Instructor instructor;
     double timeWorked = 0;
 

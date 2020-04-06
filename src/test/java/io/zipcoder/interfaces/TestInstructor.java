@@ -57,7 +57,7 @@ public class TestInstructor {
             studentsExpected[i].learn(8);
         }
 
-        Double expected = 16.0;
+        double expected = 16.0;
 
         // When
         instructor.lecture(studentsExpected, 24);
